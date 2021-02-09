@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Librarian.Controller">
+    <center>
+        <TabPane prefHeight="360.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Students">
+
+                    <VBox spacing="5">
+                        <HBox spacing="10">
+                            <TableView fx:id="tblStudents" onMouseClicked="#displayStudentDetails">
+                                <columns>
+                                    <TableColumn prefWidth="81.0" text="First Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="firstName" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="82.0" text="Last Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="lastName" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="82.0" text="Username">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="userName" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </TableView>
+                            <GridPane prefHeight="305.0" prefWidth="337.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="154.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="181.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label prefHeight="32.0" prefWidth="128.0" text="ID:">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="134.0" text="First Name:" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="72.0" prefHeight="32.0" prefWidth="126.0" text="Last Name:" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="123.0" prefHeight="32.0" prefWidth="132.0" text="Username:" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="174.0" prefHeight="32.0" prefWidth="127.0" text="Password:" GridPane.rowIndex="4">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="lblStudentId" layoutX="11.0" layoutY="274.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentFirstName" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentLastName" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentUsername" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentPassword" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </GridPane>
+                        </HBox>
+
+                        <HBox prefHeight="20" prefWidth="200.0" spacing="5">
+                            <PasswordField fx:id="txtStudPassword" promptText="password">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="8.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </PasswordField>
+                            <TextField fx:id="txtStudFirstName" promptText="first name">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="8.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                            <TextField fx:id="txtStudLastName" promptText="last name">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="8.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                            <TextField fx:id="txtStudUsername" promptText="username">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="8.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                        </HBox>
+                        <HBox prefHeight="20" prefWidth="200.0" spacing="10">
+                            <Button onAction="#addStud" prefHeight="25.0" prefWidth="50.0" text="Add">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                                <HBox.margin>
+                                    <Insets left="8.0" />
+                                </HBox.margin>
+                            </Button>
+                            <Button onAction="#updateStudent" prefHeight="25.0" prefWidth="50.0" text="Edit">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                            </Button>
+                            <Button onAction="#deleteStudent" prefHeight="25.0" prefWidth="60.0" text="Delete">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                            </Button>
+                        </HBox>
+                    </VBox>
+                </Tab>
+
+                <Tab text="Books">
+                    <VBox spacing="5">
+                        <HBox spacing="5">
+                            <Label alignment="BOTTOM_RIGHT" text="Find book by: ">
+                                <HBox.margin>
+                                    <Insets top="2.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="104.0" />
+                            <TextField fx:id="txtFilter" onKeyReleased="#filter" prefHeight="25.0" prefWidth="129.0" promptText="search..." />
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                        <HBox spacing="10">
+                            <TableView fx:id="tblBooks" maxHeight="-Infinity" onMouseClicked="#displayBookDetails" prefHeight="300.0" prefWidth="405.0">
+                                <columns>
+                                    <TableColumn prefWidth="81.0" text="Title">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="title" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="82.0" text="Author">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="author" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="82.0" text="ISBN">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="isbn" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Publish Date">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="publishDate" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                            <GridPane prefHeight="305.0" prefWidth="337.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="154.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="181.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label prefHeight="32.0" prefWidth="128.0" text="ID:">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="134.0" text="Title:" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="72.0" prefHeight="32.0" prefWidth="126.0" text="Author:" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="123.0" prefHeight="32.0" prefWidth="132.0" text="ISBN:" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="174.0" prefHeight="32.0" prefWidth="127.0" text="Publish Date:" GridPane.rowIndex="4">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="123.0" prefHeight="32.0" prefWidth="132.0" text="Taken By:" GridPane.rowIndex="5">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets left="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="lblBookId" layoutX="11.0" layoutY="274.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblBookTitle" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblBookAuthor" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblBookISBN" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblBookPubDate" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblBookTakenBy" layoutX="11.0" layoutY="21.0" prefHeight="32.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                        <font>
+                                            <Font name="System Italic" size="16.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </GridPane>
+                        </HBox>
+                        <HBox prefHeight="20" prefWidth="200.0" spacing="5">
+                            <TextField fx:id="txtTitle" prefHeight="25.0" prefWidth="144.0" promptText="title">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="8.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                            <TextField fx:id="txtAuthor" prefHeight="25.0" prefWidth="142.0" promptText="author">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                            <TextField fx:id="txtISBN" prefHeight="25.0" prefWidth="128.0" promptText="isbn">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                            <TextField fx:id="txtPublishDate" prefHeight="25.0" prefWidth="130.0" promptText="publish date">
+                                <HBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                </HBox.margin>
+                            </TextField>
+                        </HBox>
+                        <HBox prefHeight="20" prefWidth="200.0" spacing="10">
+                            <Button onAction="#addBook" prefHeight="25.0" prefWidth="50.0" text="Add">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                            </Button>
+                            <Button onAction="#updateBook" prefHeight="25.0" prefWidth="50.0" text="Edit">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                            </Button>
+                            <Button onAction="#deleteBook" prefHeight="25.0" prefWidth="60.0" text="Delete">
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                            </Button>
+                            <HBox>
+                                <TextField fx:id="txtGiveBookUserName" promptText="User name" />
+                                <PasswordField fx:id="pwGiveBookPassword" promptText="Password" />
+                                <Button fx:id="btnGiveBook" onAction="#handleGiveBook" text="Give chosen book" />
+                            </HBox>
+                        </HBox>
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button onAction="#handleLogOut" style="-fx-background-color: #00ffff;" text="Log out" />
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+    </bottom>
+
+</BorderPane>

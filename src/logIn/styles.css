@@ -1,0 +1,58 @@
+#btnLogin {
+    -fx-background-color:
+            #c3c4c4,
+            linear-gradient(#d6d6d6 50%, white 100%),
+            radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+#text-field{
+-fx-background-color: transparent; 
+-fx-border-color: #DEDEE4;
+-fx-border-width: 0px 0px 1px 0px;
+}
+
+#signup:hover{
+-fx-opacity: .5;
+}
+
+
+.choice-box .context-menu { -fx-background-color:  #2D3443;}
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused > .label { -fx-text-fill:  #2D3443;}
+.choice-box {
+  -fx-background-color:  #2D3443;
+  -fx-mark-color: orange;
+}
+
+.choice-box > .label { -fx-text-fill: white; }
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.text-field {
+  -fx-border-color: grey;
+  -fx-border-width: 0 0 1 0;
+  -fx-background-color: transparent;
+}
+
+#glass-grey {
+    -fx-background-color: 
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
